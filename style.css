@@ -1,1 +1,20 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+#word {
+    font-size: 32px;
+    margin: 20px;
+}
+input {
+    font-size: 24px;
+    padding: 8px;
+    width: 300px;
+}
+#result {
+    font-size: 24px;
+    color: green;
+    margin-top: 20px;
+}
 
