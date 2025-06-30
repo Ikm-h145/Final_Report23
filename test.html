@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイピングゲーム</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #word {
+      font-size: 32px;
+      margin: 20px;
+    }
+    input {
+      font-size: 24px;
+      padding: 8px;
+      width: 300px;
+    }
+    #result {
+      font-size: 24px;
+      color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>タイピングゲーム</h1>
+  <div id="word">apple</div>
+  <input type="text" id="input" placeholder="ここに入力してEnter">
+  <div id="result"></div>
+
+  <script>
+    const word = "apple";
+    const input = document.getElementById("input");
+    const result = document.getElementById("result");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        if (input.value === word) {
+          result.textContent = "正解！";
+          result.style.color = "green";
+        } else {
+          result.textContent = "間違い！";
+          result.style.color = "red";
+        }
+        input.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
