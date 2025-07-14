@@ -18,7 +18,7 @@ inputElement.addEventListener("input", () => {
     scoreElement.textContent = "スコア: " + score;
 
     wordElement.textContent = "";
-
+    inputElement.value = "";          
     setTimeout(setNewWord,500);
   }
 });
