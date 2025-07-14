@@ -1,4 +1,5 @@
 body {
+<<<<<<< Updated upstream
   margin: 0;
   font-family: sans-serif;
   background-color: #f0f0f0;
@@ -19,6 +20,15 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 背景の上で視認性UP */
   margin: 0;
+=======
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    background-image: url("background.jpg");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+>>>>>>> Stashed changes
 }
 #word {
     font-size: 32px;
@@ -69,6 +79,21 @@ input {
     font-size: 24px;
     color: green;
     margin-top: 20px;
+}
+.mode-select{
+    margin: 20px 0;
+    text-align: center;
+}
+.button-style{
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .nav-menu a {
