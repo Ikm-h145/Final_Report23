@@ -1,4 +1,4 @@
-const words = ["さくら", "ねこ", "うみ", "でんしゃ", "りんご"];
+const words = ["apple", "cat", "dog", "train", "computer"];
 let currentWord = "";
 let score = 0;
 
@@ -12,14 +12,16 @@ function setNewWord() {
   inputElement.value = "";
 }
 
-inputElement.addEventListener("input", () => {
-  if (inputElement.value === currentWord) {
-    score++;
-    scoreElement.textContent = "スコア: " + score;
+inputElement.addEventListener("keydown", (event) => {
+  if(event.key =="Enter"){
+    if (inputElement.value === currentWord) {
+      score++;
+      scoreElement.textContent = "スコア: " + score;
 
-    wordElement.textContent = "";
-    inputElement.value = "";          
-    setTimeout(setNewWord,500);
+      wordElement.textContent = "";
+      inputElement.value = "";          
+      setTimeout(setNewWord,500);
+    }
   }
 });
 
