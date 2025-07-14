@@ -3,6 +3,10 @@ body {
     text-align: center;
     background-color: #f0f0f0;
     padding-top: 50px;
+    background-image: url("image/bg_natural_mori.jpg"); 
+    background-size: auto;       
+    background-position: top center;  
+    background-repeat: no-repeat;
 }
 #word {
     font-size: 32px;
@@ -18,7 +22,36 @@ input {
     font-size: 20px;
     margin-top:10px;
 }
+.button-style {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
 
+.button-style:hover {
+    background-color: #0056b3;
+}
+.animal-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none; 
+}
+
+.animal {
+    position: absolute;
+    bottom: 10%;
+    left: -150px;
+    width: 100px;
+    animation: moveAnimal 12s linear infinite;
+}
 
 #result {
     font-size: 24px;
