@@ -57,3 +57,63 @@ inputElement.addEventListener("keydown", (event) => {
     }
   }
 });
+function spawnFlyingImage() {
+  const img = document.createElement("img");
+  img.src = "image/animal_dance.png"; // 好きな画像に置き換えてください
+  img.classList.add("flying-image");
+
+  const container = document.getElementById("background-container");
+
+  // スタート位置（画面の外側）
+  const startSide = Math.floor(Math.random() * 4); // 0:top, 1:right, 2:bottom, 3:left
+  const screenWidth = document.documentElement.scrollWidth;
+  const screenHeight = document.documentElement.scrollHeight;
+  let startX, startY;
+
+  if (startSide === 0) { // 上から
+    startX = Math.random() * screenWidth;
+    startY = -60;
+  } else if (startSide === 1) { // 右から
+    startX = screenWidth + 60;
+    startY = Math.random() * screenHeight;
+  } else if (startSide === 2) { // 下から
+    startX = Math.random() * screenWidth;
+    startY = screenHeight + 60;
+  } else { // 左から
+    startX = -60;
+    startY = Math.random() * screenHeight;
+  }
+
+  img.style.left = `${startX}px`;
+  img.style.top = `${startY}px`;
+
+  container.appendChild(img);
+
+  // ゴール位置（画面内を突っ切る）
+  const endX = Math.random() * screenWidth;
+  const endY = Math.random() * screenHeight;
+
+  // 移動距離に応じて速度を調整（大きいほどゆっくり）
+  const dx = endX - startX;
+  const dy = endY - startY;
+  const distance = Math.sqrt(dx * dx + dy * dy);
+  const speed = 100 + Math.random() * 200; // ピクセル/秒
+  const duration = distance / speed;
+
+  // 実際のアニメーション
+  requestAnimationFrame(() => {
+    img.style.transitionDuration = `${duration}s`;  // ここでduration指定
+    // 少し遅らせて transform変更
+    setTimeout(() => {
+      img.style.transform = `translate(${dx}px, ${dy}px)`;
+    }, 20);  // 20msぐらい待つのがおすすめ
+  });
+
+  // 一定時間後に削除
+  setTimeout(() => {
+    container.removeChild(img);
+  }, duration * 1000 + 500);
+}
+window.addEventListener("DOMContentLoaded", () => {
+  setInterval(spawnFlyingImage, 1000);
+});
