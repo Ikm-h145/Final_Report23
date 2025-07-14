@@ -1,12 +1,24 @@
 body {
-    font-family: sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
-    padding-top: 50px;
-    background-image: url("image/bg_natural_mori.jpg"); 
-    background-size: auto;       
-    background-position: top center;  
-    background-repeat: no-repeat;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+.forest-header {
+  background-image: url("image/bg_natural_mori.jpg");
+  background-repeat: repeat-x;       /* 横方向に繰り返す */
+  background-size: auto;             /* 拡大しない（元の大きさ） */
+  background-position: top center;   /* 上中央に配置 */
+
+  height: 300px;                     /* 高さを明示 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title {
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 背景の上で視認性UP */
+  margin: 0;
 }
 #word {
     font-size: 32px;
