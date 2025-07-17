@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 50;
   font-family: sans-serif;
   background-image: url("image/pattern_shibafu.png"); /* ←芝生画像のパス */
   background-repeat: repeat;               /* タイル状に敷き詰める */
