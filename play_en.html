@@ -7,15 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-  <h1>英語モードタイピング</h1>
-  <nav class="nav-menu">
-    <a href="index.html">ホーム</a> |
-    <a href="play_ja.html">日本語タイピング</a> |
-    <a href="play_en.html">英語deタイピング</a>
-    <a href="rules.html">遊び方</a>
-  </nav>
-  </header>
+  <div class="main-content">
+  
+    <header>
+      <h1 class="main-title">英語モードタイピング</h1>
+
+      <div class="nav-menu">
+        <a href="index.html">ホーム</a> |
+        <a href="play_ja.html">日本語タイピング</a> |
+        <a href="play_en.html">英語deタイピング</a>
+        <a href="rules.html">遊び方</a>
+      </div>
+    </header>
+
    <div id="timer-select">
     <p>時間を選択してください：</p>
     <button class="button-style" onclick="startGame(60)">1分</button>
@@ -30,7 +34,7 @@
   <div id="time">残り時間: --秒</div>
   </div>
   <div id="background-container"></div>
-  
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

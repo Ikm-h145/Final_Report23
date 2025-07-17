@@ -1,11 +1,24 @@
 body {
-  margin: 50;
+  margin: 0;
   font-family: sans-serif;
   background-image: url("image/pattern_shibafu.png"); /* ←芝生画像のパス */
   background-repeat: repeat;               /* タイル状に敷き詰める */
   background-size: 100px auto;                   /* 元サイズで繰り返す */
   background-position: top left;
+  height: 100vh;
+  overflow: hidden;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
 .forest-header {
   background-image: url("image/bg_natural_mori.jpg");
   background-repeat: repeat-x;       /* 横方向に繰り返す */
@@ -17,15 +30,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.center-box {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 .main-title {
   font-size: 48px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 背景の上で視認性UP */
   margin: 0;
-
-    font-family: sans-serif;
-    text-align: center;
-    padding-top: 50px;
 }
 
 #word {
@@ -122,5 +140,18 @@ input {
 .nav-menu a:hover {
   color: #0073aa;
   border-bottom: 2px solid #0073aa;
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* ボタンが背景より前に出るように */
+  background-color: rgba(255, 255, 255, 0.6); /* 背景に少し透明の白を足すと見やすくなる */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
