@@ -62,7 +62,7 @@ inputElement.addEventListener("keydown", (event) => {
 // 飛ぶ画像（背景の演出）
 function spawnFlyingImage() {
   const img = document.createElement("img");
-  img.src = "image/animal_dance.png"; // 任意の画像
+  img.src = "image/hitsuji.png"; // 任意の画像
   img.classList.add("flying-image");
 
   const container = document.getElementById("game-area");

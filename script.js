@@ -59,7 +59,7 @@ inputElement.addEventListener("keydown", (event) => {
 });
 function spawnFlyingImage() {
   const img = document.createElement("img");
-  img.src = "image/animal_dance.png"; // 好きな画像に置き換えてください
+  img.src = "image/hitsuji.png"; // 好きな画像に置き換えてください
   img.classList.add("flying-image");
 
   const container = document.getElementById("background-container");
