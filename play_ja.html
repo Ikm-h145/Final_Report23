@@ -9,17 +9,27 @@
 <body>
   <header>
   <h1>日本語モードタイピング</h1>
-  <nav>
+  <nav class="nav-menu">
     <a href="index.html">ホーム</a> |
-    <a href="play_en.html">英単語タイピング</a> |
+    <a href="play_ja.html">日本語タイピング</a> |
+    <a href="play_en.html">英語deタイピング</a>
     <a href="rules.html">遊び方</a>
   </nav>
   </header>
-  <main>
-    <p id="question"></p>
-    <input type="text" id="input" placeholder="入力してEnterを押す">
-    <p id="result"></p>
-  </main>
-  
+   <div id="timer-select">
+    <p>時間を選択してください：</p>
+    <button class="button-style" onclick="startGame(60)">1分</button>
+    <button class="button-style" onclick="startGame(180)">3分</button>
+    <button class="button-style" onclick="startGame(300)">5分</button>
+  </div>
+
+  <div id="game-area" style="display: none;">
+  <div id="word">読み込み中...</div>
+  <input type="text" id="input" autofocus>
+  <div id="score">スコア: 0</div>
+  <div id="time">残り時間: --秒</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
