@@ -65,7 +65,7 @@ function spawnFlyingImage() {
   img.src = "image/animal_dance.png"; // 任意の画像
   img.classList.add("flying-image");
 
-  const container = document.getElementById("background-container");
+  const container = document.getElementById("game-area");
 
   const startSide = Math.floor(Math.random() * 4);
   const screenWidth = document.documentElement.scrollWidth;
