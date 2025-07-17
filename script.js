@@ -59,9 +59,18 @@ inputElement.addEventListener("keydown", (event) => {
 });
 function spawnFlyingImage() {
   const img = document.createElement("img");
-  img.src = "image/hitsuji.png"; // 好きな画像に置き換えてください
-  img.classList.add("flying-image");
 
+  const imageList = [
+    "image/shika.png",
+    "image/bear.png",
+    "image/dog.png",
+    "image/hitsuji.png",
+    "image/hebi.png"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * imageList.length);
+  img.src = imageList[randomIndex];
+  img.classList.add("flying-image"); 
   const container = document.getElementById("background-container");
 
   // スタート位置（画面の外側）
@@ -97,7 +106,7 @@ function spawnFlyingImage() {
   const dx = endX - startX;
   const dy = endY - startY;
   const distance = Math.sqrt(dx * dx + dy * dy);
-  const speed = 100 + Math.random() * 200; // ピクセル/秒
+  const speed = 100 + Math.random() * 100; // ピクセル/秒
   const duration = distance / speed;
 
   // 実際のアニメーション
@@ -106,7 +115,7 @@ function spawnFlyingImage() {
     // 少し遅らせて transform変更
     setTimeout(() => {
       img.style.transform = `translate(${dx}px, ${dy}px)`;
-    }, 20);  // 20msぐらい待つのがおすすめ
+    }, 30);  
   });
 
   // 一定時間後に削除
