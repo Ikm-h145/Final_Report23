@@ -50,17 +50,27 @@ body {
     font-size: 32px;
     margin: 20px;
     color: #333;
+    text-align: center;
 }
+
 input {
     font-size: 24px;
     padding: 10px;
     width: 300px;
 }
+
 #score{
-    font-size: 20px;
-    margin-top:10px;
+    font-size: 25px;
+    margin-top:20px;
     text-align: center;
 }
+
+#time{
+  font-weight: 100;
+  font-family: cursive;
+  text-align: center;
+}
+
 .button-style {
     display: inline-block;
     padding: 12px 24px;
