@@ -47,7 +47,7 @@ body {
 }
 
 #word {
-    font-size: 32px;
+    font-size: 50px;
     margin: 20px;
     color: #333;
     text-align: center;
@@ -66,7 +66,7 @@ input {
 }
 
 #time{
-  font-weight: 100;
+  font-weight: 300;
   font-family: cursive;
   text-align: center;
 }
