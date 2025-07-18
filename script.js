@@ -56,6 +56,27 @@ function endGame() {
   inputElement.disabled = true;
 }
 
+function endGame(score) {
+  // ゲーム画面を非表示
+  document.getElementById("game-area").style.display = "none";
+
+  // スコアに応じたメッセージを作成
+  const finalMessage = document.getElementById("final-message");
+  let message = "";
+  if (score >= 30) {
+    message = "wonderful！You are engineer！";
+  } else if (score >= 10) {
+    message = "nice！Let's try harder";
+  } else {
+    message = "...  fight..";
+  }
+
+  finalMessage.textContent = `スコア: ${score}点\n${message}`;
+
+  // 結果画面を表示
+  document.getElementById("end-screen").style.display = "block";
+}
+
 inputElement.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     if (inputElement.value === currentWord) {
@@ -65,10 +86,12 @@ inputElement.addEventListener("keydown", (event) => {
       wordElement.textContent = "";
       inputElement.value = "";
 
-      setTimeout(setNewWord, 500);
+      setTimeout(setNewWord, 100);
     }
   }
 });
+
+
 function spawnFlyingImage() {
   const img = document.createElement("img");
 
@@ -135,6 +158,18 @@ function spawnFlyingImage() {
     container.removeChild(img);
   }, duration * 1000 + 500);
 }
+
 window.addEventListener("DOMContentLoaded", () => {
   setInterval(spawnFlyingImage, 1000);
+});
+
+document.getElementById("retry-button").addEventListener("click", () => {
+  document.getElementById("end-screen").style.display = "none";
+  startGame(currentTime);  // 時間を保持しておく変数があればそれを使う
+});
+
+document.getElementById("back-button").addEventListener("click", () => {
+  // 最初のタイマー選択画面を表示、他は非表示に
+  document.getElementById("end-screen").style.display = "none";
+  document.getElementById("timer-select").style.display = "block";
 });

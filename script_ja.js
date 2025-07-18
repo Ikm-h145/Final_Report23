@@ -57,6 +57,27 @@ function endGame() {
   inputElement.disabled = true;
 }
 
+function endGame(score) {
+  // ゲーム画面を非表示
+  document.getElementById("game-area").style.display = "none";
+
+  // スコアに応じたメッセージを作成
+  const finalMessage = document.getElementById("final-message");
+  let message = "";
+  if (score >= 30) {
+    message = "すごい！今日からエンジニアだ！";
+  } else if (score >= 10) {
+    message = "いい感じ！もっと上を目指そう";
+  } else {
+    message = "もっと練習しよう！がんばって";
+  }
+
+  finalMessage.textContent = `スコア: ${score}点\n${message}`;
+
+  // 結果画面を表示
+  document.getElementById("end-screen").style.display = "block";
+}
+
 inputElement.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     if (inputElement.value === currentWord) {
@@ -66,7 +87,7 @@ inputElement.addEventListener("keydown", (event) => {
       wordElement.textContent = "";
       inputElement.value = "";
 
-      setTimeout(setNewWord, 500);
+      setTimeout(setNewWord, 100);
     }
   }
 });
