@@ -1,4 +1,16 @@
-const words = ["university", "cat", "dog", "train", "apple"];
+const words = ["university", "cat", "dog", "train", "apple",
+  "python","java","meijo","information","document","icpc",
+  "society","data","knowledge","cloud","tiger","lion",
+  "print","scan","import","double","int","string",
+  "answer","mention","input","computer","super","name",
+  "google","powerpoint","excel","word","desktop","eclipse",
+  "homework","remember","practice","english","chinese","french",
+  "german","random","matplotlib","machine","expensive","recommend",
+  "success","null","fail","true","translate","government",
+  "key","assistant","baseball","basketball","volleyball","tennis",
+  "soccer","proportion","innovation","technology","passion","universe",
+  "index","chapter",
+];
 let currentWord = "";
 let score = 0;
 let timeLeft = 0;
