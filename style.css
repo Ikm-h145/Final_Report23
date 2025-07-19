@@ -132,6 +132,10 @@ button:hover,
     margin: 20px 0;
     text-align: center;
 }
+.mode-select{
+  margin: 20px 0;
+  text-align: center;
+}
 
 #background-container {
   position: absolute;
