@@ -70,7 +70,7 @@ function endGame() {
     message = "...  fight..";
   }
 
-  finalMessage.textContent = `スコア: ${score}点<br>${message}`;
+  finalMessage.textContent = `スコア: ${score}点 ${message}`;
   endScreen.style.display = "block";
 }
 
@@ -152,6 +152,6 @@ document.getElementById("retry-button").addEventListener("click", () => {
 
 document.getElementById("back-button").addEventListener("click", () => {
   // 最初のタイマー選択画面を表示、他は非表示に
-  MediaElementAudioSourceNoden.style.display = "none";
+  endScreen.style.display = "none";
   timerSelect.style.display = "block";
 });

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: sans-serif;
   background-image: url("image/pattern_shibafu.png"); /* ←芝生画像のパス */
   background-repeat: repeat;               /* タイル状に敷き詰める */
@@ -7,6 +8,7 @@ body {
   background-position: top left;
   height: 100vh;
   overflow: hidden;
+  background-color: #f2f2f2;
 }
 
 .main-content {
@@ -24,19 +26,10 @@ body {
   background-repeat: repeat-x;       /* 横方向に繰り返す */
   background-size: auto;             /* 拡大しない（元の大きさ） */
   background-position: top center;   /* 上中央に配置 */
-
   height: 300px;                     /* 高さを明示 */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.center-box {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .main-title {
@@ -44,123 +37,6 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 背景の上で視認性UP */
   margin: 0;
-}
-
-#word {
-    font-size: 50px;
-    margin: 20px;
-    font-style: italic, bold;
-    color: #333;
-    text-align: center;
-}
-
-input {
-    font-size: 24px;
-    padding: 10px;
-    width: 300px;
-}
-
-#score{
-    font-size: 25px;
-    margin-top:20px;
-    text-align: center;
-}
-
-#time{
-  font-weight: 300;
-  font-family: cursive;
-  text-align: center;
-}
-
-#end-screen {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px;
-  margin: 40px auto;
-  border-radius: 16px;
-  max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.button-style {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 10px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-.button-style:hover {
-    background-color: #0056b3;
-}
-.animal-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    pointer-events: none; 
-}
-
-.animal {
-    position: absolute;
-    bottom: 10%;
-    left: -150px;
-    width: 100px;
-    animation: moveAnimal 12s linear infinite;
-}
-#background-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* クリック不可にする */
-  overflow: visible;
-  z-index: -1; /* 背景に回す */
-}
-
-.flying-image {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  transition: transform linear 0s;
-  will-change: transform;
-  z-index: 10; /* ← 念のため追加（他の要素の下に潜ってしまうのを防ぐ） */
-}
-#result {
-    font-size: 24px;
-    color: green;
-    margin-top: 20px;
-}
-.mode-select{
-    margin: 20px 0;
-    text-align: center;
-}
-.button-style{
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 10px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-
-.nav-menu a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #2c2c2c;
-  font-size: 16px;
-  transition: all 0.3s;
-}
-
-.nav-menu a:hover {
-  color: #0073aa;
-  border-bottom: 2px solid #0073aa;
 }
 
 .center-box {
@@ -176,3 +52,157 @@ input {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+#word {
+    font-size: 50px;
+    margin: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+#score{
+    font-size: 25px;
+    margin-top:20px;
+    text-align: center;
+}
+
+#time{
+  font-weight: 300;
+  font-family: cursive;
+  text-align: center;
+}
+
+#game-area,
+#timer-select,
+#difficulty-select,
+#end-screen {
+  background-color: #fff;
+  padding: 16px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+input[type="text"],
+input {
+    font-size: 1.5em;
+    padding: 12px;
+    width: 100%;
+    box-sizing:border-box;
+}
+
+button,
+.button-style {
+    display: inline-block;
+    padding: 16px;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+.button-style:hover {
+  background-color: #0056b3;
+}
+
+#end-screen {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 16px;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#result {
+    font-size: 24px;
+    color: green;
+    margin-top: 20px;
+}
+.mode-select{
+    margin: 20px 0;
+    text-align: center;
+}
+
+#background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  pointer-events: none; /* クリック不可にする */
+  overflow: visible;
+  z-index: -1; /* 背景に回す */
+}
+
+.flying-image {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  transition: transform linear 0s;
+  will-change: transform;
+  z-index: 10; 
+}
+
+.animal-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none; 
+}
+
+.animal {
+    position: absolute;
+    bottom: 10%;
+    left: -150px;
+    width: 100px;
+    animation: moveAnimal 12s linear infinite;
+}
+
+/*ナビメニュー*/
+.nav-menu a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #2c2c2c;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #0073aa;
+  border-bottom: 2px solid #0073aa;
+}
+
+/*スマホ対応*/
+
+@media (max-width: 480px) {
+  h1, p {
+    font-size: 1.2em;
+  }
+  input[type="text"] {
+    font-size: 1.2em;
+  }
+  button,
+  .button-style {
+    font-size: 1em;
+    padding: 12px;
+  }
+  #word{
+    font-size:36px;
+  }
+  main-title{
+    font-size:32px;
+  }
+
+
+}

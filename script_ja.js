@@ -11,10 +11,12 @@ const words = ["こんにちは", "ありがとう", "さようなら", "いた�
   "ジャバ","ジャバスクリプト","データエンジニアリング","フィジカルコンピューティング","ヒューマンメディア","ネットワークシステム",
   "基本情報技術者","応用情報技術者"
 ];
+
 let currentWord = "";
 let score = 0;
 let timeLeft = 0;
 let timerId = null;
+let currentTime = 0;
 
 const wordElement = document.getElementById("word");
 const inputElement = document.getElementById("input");
@@ -22,20 +24,27 @@ const scoreElement = document.getElementById("score");
 const timeElement = document.getElementById("time");
 const gameArea = document.getElementById("game-area");
 const timerSelect = document.getElementById("timer-select");
+const endScreen = document.getElementById("end-screen");
+const finalMessage = document.getElementById("final-message");
 
+//ゲーム開始
 function startGame(seconds) {
   timeLeft = seconds;
+  currentTime = seconds;
   score = 0;
-  scoreElement.textContent = "スコア: 0";
-  timeElement.textContent = `残り時間: ${timeLeft}秒`;
 
   timerSelect.style.display = "none";
+  endScreen.style.display = "none";
   gameArea.style.display = "block";
 
-  setNewWord();
+  scoreElement.textContent = "スコア: 0";
+  timeElement.textContent = `残り時間: ${timeLeft}秒`;
   inputElement.value = "";
   inputElement.disabled = false;
   inputElement.focus();
+
+
+  setNewWord();
 
   timerId = setInterval(() => {
     timeLeft--;
@@ -53,16 +62,9 @@ function setNewWord() {
 }
 
 function endGame() {
-  wordElement.textContent = "ゲーム終了！";
-  inputElement.disabled = true;
-}
-
-function endGame(score) {
-  // ゲーム画面を非表示
-  document.getElementById("game-area").style.display = "none";
+  gameArea.style.display = "none";
 
   // スコアに応じたメッセージを作成
-  const finalMessage = document.getElementById("final-message");
   let message = "";
   if (score >= 30) {
     message = "すごい！今日からエンジニアだ！";
@@ -72,10 +74,8 @@ function endGame(score) {
     message = "もっと練習しよう！がんばって";
   }
 
-  finalMessage.textContent = `スコア: ${score}点\n${message}`;
-
-  // 結果画面を表示
-  document.getElementById("end-screen").style.display = "block";
+  finalMessage.textContent = 'スコア: ${score}点'<br>'${message}';
+  endScreen.style.display = "block";
 }
 
 inputElement.addEventListener("keydown", (event) => {
@@ -83,11 +83,9 @@ inputElement.addEventListener("keydown", (event) => {
     if (inputElement.value === currentWord) {
       score++;
       scoreElement.textContent = "スコア: " + score;
-
-      wordElement.textContent = "";
       inputElement.value = "";
 
-      setTimeout(setNewWord, 0);
+      setNewWord();
     }
   }
 });
@@ -98,7 +96,7 @@ function spawnFlyingImage() {
   img.src = "image/hitsuji.png"; // 任意の画像
   img.classList.add("flying-image");
 
-  const container = document.getElementById("game-area");
+  const container = gameArea;
 
   const startSide = Math.floor(Math.random() * 4);
   const screenWidth = document.documentElement.scrollWidth;
@@ -121,7 +119,6 @@ function spawnFlyingImage() {
 
   img.style.left = `${startX}px`;
   img.style.top = `${startY}px`;
-
   container.appendChild(img);
 
   const endX = Math.random() * screenWidth;
@@ -146,4 +143,14 @@ function spawnFlyingImage() {
 
 window.addEventListener("DOMContentLoaded", () => {
   setInterval(spawnFlyingImage, 1000);
+});
+
+document.getElementById("retry-button").addEventListener("click", () => {
+  endScreen.style.display = "none";
+  startGame(currentTime);
+});
+
+document.getElementById("back-button").addEventListener("click", () => {
+  endScreen.style.display = "none";
+  timerSelect.style.display = "block";
 });
