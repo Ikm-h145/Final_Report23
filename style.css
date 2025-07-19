@@ -1,3 +1,6 @@
+* {
+  margin: 0; padding: 0;
+}
 body {
   margin: 0;
   padding: 0;
@@ -218,17 +221,17 @@ footer {
   color: whitesmoke;
 }
 
-body.footer {
+.footer {
   height: 60px;
 }
 
-body.footer-menu-list {
+.footer-menu-list {
   list-style: none;
   text-align: center;
   line-height: 60px;
 }
 
-body.footer-menu-list li {
+.footer-menu-list li {
   margin: 10px;
   display: inline;
 }
