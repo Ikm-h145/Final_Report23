@@ -18,6 +18,7 @@ body {
   min-height: 100vh;
   background-color: #f2f2f2;
   text-align: center;
+   overflow: auto;
 }
 
 .main-content {
