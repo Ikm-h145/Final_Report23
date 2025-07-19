@@ -87,7 +87,7 @@ inputElement.addEventListener("keydown", (event) => {
       wordElement.textContent = "";
       inputElement.value = "";
 
-      setTimeout(setNewWord, 100);
+      setTimeout(setNewWord, 0);
     }
   }
 });
