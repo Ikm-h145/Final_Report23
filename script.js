@@ -70,7 +70,7 @@ function endGame() {
     message = "...  fight..";
   }
 
-  finalMessage.textContent = `スコア: ${score}点 ${message}`;
+  finalMessage.innerHTML = `スコア: ${score}点<br> ${message}`;
   endScreen.style.display = "block";
 }
 

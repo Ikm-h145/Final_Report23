@@ -74,7 +74,7 @@ function endGame() {
     message = "もっと練習しよう！がんばって";
   }
 
-  finalMessage.textContent = 'スコア: ${score}点'<br>'${message}';
+  finalMessage.innerHTML = `スコア: ${score}点<br>${message}`;
   endScreen.style.display = "block";
 }
 
