@@ -1,13 +1,6 @@
 * {
   margin: 0; padding: 0;
 }
-html,body{
-  height: 100%;
-  margin: 0;
-}
-
-
-
 body {
   margin: 0;
   padding: 0;
@@ -25,7 +18,7 @@ body {
 }
 
 .main-content {
-  flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -235,7 +228,7 @@ footer {
 .footer {
   height: 60px;
   padding:16px;
-  
+
 }
 
 .footer-menu-list {
