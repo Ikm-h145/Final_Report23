@@ -40,6 +40,11 @@ body {
   text-align: center;
 }
 
+.h2{
+  font-size: 20px;
+  text-align: center;
+}
+
 .center-box {
   position: absolute;
   top: 50%;
@@ -103,12 +108,13 @@ button,
     font-size: 1.2em;
     background-color: #007bff;
     color: white;
-    border: 6px inset #b9000e;;
+    border: 6px inset #0030c0;;
     text-decoration: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 100vh;
+    box-shadow: 0 3px 5px rgba(0,0,0, .3);
 }
 
 button:hover,
