@@ -218,17 +218,17 @@ footer {
   color: whitesmoke;
 }
 
-.footer {
+body.footer {
   height: 60px;
 }
 
-.footer-menu-list {
+body.footer-menu-list {
   list-style: none;
   text-align: center;
   line-height: 60px;
 }
 
-.footer-menu-list li {
+body.footer-menu-list li {
   margin: 10px;
   display: inline;
 }
