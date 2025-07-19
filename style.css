@@ -1,6 +1,13 @@
 * {
   margin: 0; padding: 0;
 }
+html,body{
+  height: 100%;
+  margin: 0;
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -9,13 +16,16 @@ body {
   background-repeat: repeat;               /* タイル状に敷き詰める */
   background-size: 100px auto;                   /* 元サイズで繰り返す */
   background-position: top left;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   overflow: auto;
   background-color: #f2f2f2;
 }
 
 .main-content {
-  display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -208,6 +218,7 @@ button:hover,
   color: #2c2c2c;
   font-size: 16px;
   transition: all 0.3s;
+  text-align: center;
 }
 
 .nav-menu a:hover {
@@ -223,6 +234,8 @@ footer {
 
 .footer {
   height: 60px;
+  padding:16px;
+  
 }
 
 .footer-menu-list {
