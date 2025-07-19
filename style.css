@@ -41,7 +41,7 @@ body {
   background-repeat: repeat-x;       /* 横方向に繰り返す */
   background-size: auto;             /* 拡大しない（元の大きさ） */
   background-position: top center;   /* 上中央に配置 */
-  height: 500px;                     /* 高さを明示 */
+  height: 1000px;                     /* 高さを明示 */
   display: flex;
   justify-content: center;
   align-items: center;
