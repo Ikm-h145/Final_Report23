@@ -7,7 +7,7 @@ body {
   background-size: 100px auto;                   /* 元サイズで繰り返す */
   background-position: top left;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   background-color: #f2f2f2;
 }
 
