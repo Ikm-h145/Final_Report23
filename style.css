@@ -42,6 +42,10 @@ body {
   align-items: center;
 }
 
+header{
+  padding-bottom:20px;
+}
+
 .main-title {
   font-size: 48px;
   color: white;
