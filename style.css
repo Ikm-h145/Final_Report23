@@ -37,6 +37,7 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 背景の上で視認性UP */
   margin: 0;
+  text-align: center;
 }
 
 .center-box {
@@ -102,11 +103,12 @@ button,
     font-size: 1.2em;
     background-color: #007bff;
     color: white;
-    border: none;
+    border: 6px inset #b9000e;;
     text-decoration: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 100vh;
 }
 
 button:hover,
