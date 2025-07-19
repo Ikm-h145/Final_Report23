@@ -49,6 +49,10 @@ a{
   text-align: center;
 }
 
+li{
+  text-align: left;
+}
+
 .center-box {
   position: absolute;
   top: 50%;
