@@ -37,14 +37,14 @@ body {
   background-repeat: repeat-x;       /* 横方向に繰り返す */
   background-size: auto;             /* 拡大しない（元の大きさ） */
   background-position: top center;   /* 上中央に配置 */
-  height: 120px;                     /* 高さを明示 */
+  height: 200px;                     /* 高さを明示 */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header{
-  padding-bottom:5px;
+  padding-bottom:20px;
 }
 
 .main-title {
