@@ -53,6 +53,10 @@ li{
   text-align: left;
 }
 
+.sub{
+  text-align: center;
+}
+
 .center-box {
   position: absolute;
   top: 50%;
@@ -114,7 +118,7 @@ button,
     padding: 16px;
     min-width: 120px;
     width: auto;
-    margin: 8px 0;
+    margin: 8px 12px;
     font-size: 1.2em;
     background-color: #007bff;
     color: white;
@@ -156,6 +160,7 @@ button:hover,
   margin: 20px 0;
   text-align: center;
 }
+
 
 #background-container {
   position: absolute;
