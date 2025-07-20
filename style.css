@@ -1,5 +1,5 @@
 html,body{
-  height: 105%;
+  height: 100%;
   margin:  0;
   padding: 0;
   overflow-x: hidden; 
@@ -262,6 +262,15 @@ footer {
   padding: 20px;
   box-sizing: border-box;
 
+}
+
+footer.footer {
+  background-color: darkred;
+  color: whitesmoke;
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-menu-list {
