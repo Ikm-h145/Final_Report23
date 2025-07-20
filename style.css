@@ -21,7 +21,7 @@ body {
    overflow: auto;
 }
 body.rules-mode{
-  background-image: url("Desolate-Forest1.jpg");
+  background-image: url("Desolate.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
