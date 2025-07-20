@@ -20,11 +20,12 @@ body {
   text-align: center;
    overflow: auto;
 }
+
 body.rules-mode{
-  background-image: url("Desolate.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: url("Desolate.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
 }
 
 .main-content {
@@ -240,7 +241,7 @@ footer {
   color: whitesmoke;
   text-align: center;
   padding: 16px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
