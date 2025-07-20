@@ -26,8 +26,6 @@ body.rules-mode{
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
-  position: fixed;
-  filter: brightness(120%);
   height: 100%;
 }
 
