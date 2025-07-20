@@ -29,6 +29,11 @@ body.rules-mode{
   height: 100%;
 }
 
+body.play {
+  overflow: hidden;
+  height: 100vh; /* 念のため高さを固定 */
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -55,7 +60,7 @@ main{
   background-repeat: repeat-x;       /* 横方向に繰り返す */
   background-size: auto;             /* 拡大しない（元の大きさ） */
   background-position: top center;   /* 上中央に配置 */
-  height: 200px;                     /* 高さを明示 */
+  height: 150px;                     /* 高さを明示 */
   display: flex;
   justify-content: center;
   align-items: center;
