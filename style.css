@@ -20,6 +20,13 @@ body {
   text-align: center;
    overflow: auto;
 }
+body.rules-manu{
+  background-image: url("Desolate-Forest1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+}
 
 .main-content {
   flex: 1;
