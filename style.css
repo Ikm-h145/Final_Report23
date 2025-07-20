@@ -20,7 +20,7 @@ body {
   text-align: center;
    overflow: auto;
 }
-body.rules-manu{
+body.rules-mode{
   background-image: url("Desolate-Forest1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
