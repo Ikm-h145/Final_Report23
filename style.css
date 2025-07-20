@@ -55,7 +55,12 @@ body.play {
 }
 
 .feature-reverse{
+  display: flex;  
   flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 40px;
 }
 
 .feature img{
